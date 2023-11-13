@@ -1,6 +1,8 @@
+import 'package:banana_app/screens/shop_card.dart';
 import 'package:flutter/material.dart';
 import 'package:banana_app/widgets/left_drawer.dart';
 import 'package:banana_app/screens/shoplist_form.dart';
+import 'package:banana_app/screens/shop_card.dart';
 
 const List<Color> colorList = [Colors.blue, Colors.red, Colors.green];
 
@@ -8,10 +10,10 @@ class MyHomePage extends StatelessWidget {
     MyHomePage({Key? key}) : super(key: key);
 
     final List<ShopItem> items = [
-    ShopItem("Lihat Item", Icons.checklist, 0),
-    ShopItem("Tambah Item", Icons.add_shopping_cart, 1),
-    ShopItem("Logout", Icons.logout, 2),
-  ];
+      ShopItem("Lihat Item", Icons.checklist, 0),
+      ShopItem("Tambah Item", Icons.add_shopping_cart, 1),
+      ShopItem("Logout", Icons.logout, 2),
+    ];
 
     @override
     Widget build(BuildContext context) {
@@ -86,6 +88,14 @@ class ShopCard extends StatelessWidget {
                 MaterialPageRoute(
                   builder: (context) => const ShopFormPage(),
                 ));
+          }
+          else if (item.id == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ShopCardPage(),
+              )
+            );
           }
         },
         child: Container(

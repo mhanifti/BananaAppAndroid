@@ -1,3 +1,4 @@
+import 'package:banana_app/screens/shop_card.dart';
 import 'package:flutter/material.dart';
 import 'package:banana_app/screens/menu.dart';
 import 'package:banana_app/screens/shoplist_form.dart';
@@ -55,10 +56,23 @@ class LeftDrawer extends StatelessWidget {
             title: const Text('Tambah Produk'),
             // Bagian redirection ke ShopFormPage
             onTap: () {
-              /*
-    TODO: Buatlah routing ke ShopFormPage di sini,
-    setelah halaman ShopFormPage sudah dibuat.
-    */
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ShopFormPage(),
+                  ));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.shopping_bag),
+            title: const Text('Lihat Produk'),
+            // Bagian redirection ke ShopFormPage
+            onTap: () {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ShopCardPage(),
+                  ));
             },
           ),
         ],

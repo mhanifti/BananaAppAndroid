@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:banana_app/widgets/left_drawer.dart';
+import 'package:banana_app/screens/shop_card.dart';
 
 class ShopFormPage extends StatefulWidget {
   const ShopFormPage({super.key});
@@ -142,6 +143,7 @@ class _ShopFormPageState extends State<ShopFormPage> {
                             );
                           },
                         );
+                        ShopItemCard.itemlist.add(ShopItemCard(_name, _price, _description));
                       }
                       _formKey.currentState!.reset();
                     },
