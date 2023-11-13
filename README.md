@@ -15,6 +15,30 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+## Tugas 8
+
+Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+= Perbedaan antara Navigator.push() dan Navigator.pushReplacement() adalah cara flutter dalam merubah page aplikasi. Navigator.push() berarti menimpa page sebelumnya dengan page yang baru tanpa menghapus page dibawahnya, sedangkan pada Navigator.pushReplacement() berarti mengganti page yang ada dengan page yang baru, sehingga page sebelumnya akan hilang. Perbedaan diketahui ketika Navigator.pop() dilakukan. Jika pop dilakukan setelah push, maka akan kembali ke page sebelumnya, jika pop dilakukan setelah pushReplacement, maka akan kembali ke 2 kali page sebelumnya. Penggunaan metode push jika ingin page sebelumnya tidak ingin direset, sedangkan pushReplacement jika ingin membuat aplikasi lebih ringan.
+
+Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+= 
+1. Center =  Center berarti membuat child berada di tengah-tengah layar baik secara vertical maupun horizontal.
+2. Container = Container berarti sebuah kotak kosong yang dapat diatur panjang, lebar, dan padding.
+3. Align = Align berarti membuat child dapat diatur berada dimana dengan mengatur jarak di top, bottom, left, dan right.
+
+Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+= Pada tugas kali ini, saya hanya menggunakan elemen input TextFormField dengan decoration, onChanged, dan validator. Untuk validator sendiri akan memvalidasi input user sudah sesuai ketentuan atau belum. Dan onChanged akan merubah state setiap kali berubah. validator akan berjalan ketika menekan tombol save, jika tidak sesuai, maka tidak disave.
+
+Bagaimana penerapan clean architecture pada aplikasi Flutter?
+= Pada tugas kali ini, penerapan clean architecture dilakukan dengan membedakan antara dart untuk tampilan aplikasi dengan dart untuk aside. setiap page memiliki 1 file dart tersendiri, dan 1 aside memiliki 1 file dart tersendiri pula.
+
+Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
+= 
+1. Mengikuti Tutorial dan mengubah beberapa kata yang dibutuhkan pada tampilan aplikasi.
+2. Membuat file dart baru untuk tampilan produk yang disave (Lihat Produk)
+3. Membuat model baru pada file dart yang baru tersebut sebagai model yang tersimpan.
+4. Menghubungkan input form dengan model agar tersimpan dan dapat tampil di halaman lihat produk.
+
 ## Tugas 7
 
 Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?
