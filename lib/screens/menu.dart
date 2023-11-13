@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:banana_app/widgets/left_drawer.dart';
+import 'package:banana_app/screens/shoplist_form.dart';
 
 const List<Color> colorList = [Colors.blue, Colors.red, Colors.green];
 
@@ -20,6 +22,7 @@ class MyHomePage extends StatelessWidget {
             ),
             backgroundColor: Colors.indigo,
         ),
+          drawer: const LeftDrawer(),
         body: SingleChildScrollView(
             // Widget wrapper yang dapat discroll
             child: Padding(
@@ -77,6 +80,13 @@ class ShopCard extends StatelessWidget {
             ..hideCurrentSnackBar()
             ..showSnackBar(SnackBar(
                 content: Text("Kamu telah menekan tombol ${item.name}!")));
+          if (item.id == 1) {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ShopFormPage(),
+                ));
+          }
         },
         child: Container(
           // Container untuk menyimpan Icon dan Text
