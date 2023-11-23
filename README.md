@@ -15,6 +15,30 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+## Tugas 9
+
+Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+  Bisa, sebab JSON merupakan format, sama halnya seperti string, list, dict, dan semacamnya. Akan tetapi jika data JSON tersebut memiliki hubungan antar objek yang kompleks, dibutuhkan perubahan secara realtime, maupun manipulasi data secara realtime. Maka pengambilan data JSON tanpa membuat model tersebut tidaklah efektif.
+
+Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+  CookieRequest berfungsi sebagai penyimpan informasi pengguna seperti last_login maupun csrfmiddelwaretoken. Dalam hal ini, CookieRequest sangat diperlukan apabila berkaitan dengan request HTTP ke server yang membutuhkan csrf sehingga dibutuhkan oleh semua komponen pada aplikasi flutter.
+
+Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+  data dari JSON biasanya berbentuk queryDict, server/aplikasi fetch() url/request bersama dengan data JSON. sehingga setelahnya server/aplikasi dapat mengambil data tersebut dalam bentuk querydict. Jika ingin membutuhkan value, maka hanya get(key) saja.
+
+Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+  autentikasi, menerima username dan password, atau hal yang dibutuhkan lainnya. Lalu akan fetch(url) dan menaruh data yang dibutuhkan. Lalu server akan mencoba login dan jika berhasil, maka akan merespon true/berhasil, jika tidak maka sebaliknya. Lalu dari response tersebut bisa dilanjutkan pada aplikasi seperti push ke widget lain ataupun info gagal login.
+
+Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+1. Container Widget: Menampung widget lain, dan mengatur warna, padding, dan ukuran.
+2. Scaffold Widget: Menampilkan layout utama dari aplikasi, dengan header, drawer, dan body.
+3. Drawer Widget: Menampilkan menu untuk navigasi ke add_product, list_product, dan main menu.
+4. AlertDialog Widget: Menampilkan dialog box dengan pesan seperti add_product dengan pesan berhasil tersimpan atau gagal tersimpan.
+
+Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+1. Mengikuti Tutorial dan mengubah beberapa kata yang dibutuhkan pada tampilan aplikasi.
+2. Membuat tombol regsitrasi, halaman registrasi, dan input registrasi, tetapi masih belum bisa digunakan saat ini.
+
 ## Tugas 8
 
 Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat
